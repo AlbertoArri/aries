@@ -1,12 +1,11 @@
+import './env';
+
+import path from 'path';
 import express from 'express';
 import cors from 'cors';
-import path from 'path';
-import dotenv from 'dotenv';
 import { initDb } from './db';
 import newsRouter from './routes/news';
 import analysesRouter from './routes/analyses';
-
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT ?? 3001;

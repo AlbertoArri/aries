@@ -21,7 +21,6 @@ Search for news articles and get AI-powered summaries and sentiment analysis, po
 
 ```bash
 npm install
-cp .env.example .env
 # Fill in .env with your keys
 ```
 
