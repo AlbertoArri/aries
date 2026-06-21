@@ -1,4 +1,4 @@
-# Newslens
+# A5o A2i News
 
 Search for news articles and get AI-powered summaries and sentiment analysis, powered by GNews and OpenAI.
 
