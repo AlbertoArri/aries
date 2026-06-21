@@ -73,7 +73,7 @@ export default function SearchBar({ onSearch, onCategorySearch, loading }: Props
         disabled={loading || (mode === 'search' && !query.trim())}
         className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
       >
-        {loading ? 'Searching…' : mode === 'search' ? 'Search' : 'Get Top 3'}
+        {loading ? 'Searching…' : mode === 'search' ? 'Search' : 'Get'}
       </button>
     </form>
   );
