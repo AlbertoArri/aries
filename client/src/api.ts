@@ -1,10 +1,16 @@
-import type { Article, Analysis } from './types';
+import type { Article, Analysis, NewsCategory } from './types';
 
 const BASE = '/api';
 
 export async function searchNews(query: string): Promise<Article[]> {
   const res = await fetch(`${BASE}/news?q=${encodeURIComponent(query)}`);
   if (!res.ok) throw new Error('Failed to search news');
+  return res.json() as Promise<Article[]>;
+}
+
+export async function getTopHeadlines(category: NewsCategory): Promise<Article[]> {
+  const res = await fetch(`${BASE}/news/top-headlines?category=${encodeURIComponent(category)}`);
+  if (!res.ok) throw new Error('Failed to fetch top headlines');
   return res.json() as Promise<Article[]>;
 }
 

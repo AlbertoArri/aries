@@ -8,6 +8,20 @@ export interface Article {
   source: string;
 }
 
+export const NEWS_CATEGORIES = [
+  'general',
+  'world',
+  'nation',
+  'business',
+  'technology',
+  'entertainment',
+  'sports',
+  'science',
+  'health',
+] as const;
+
+export type NewsCategory = (typeof NEWS_CATEGORIES)[number];
+
 export interface Analysis {
   id: number;
   article_url: string;
